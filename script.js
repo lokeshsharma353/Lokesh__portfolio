@@ -121,3 +121,27 @@ PROJECTS
         window.URL.revokeObjectURL(url);
     });
 }
+
+// WhatsApp API Integration
+function openWhatsApp() {
+    const phoneNumber = '919588563701';
+    const message = 'Hi Lokesh! I found your portfolio and would like to connect with you.';
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, '_blank');
+}
+
+function sendToWhatsApp() {
+    const name = document.querySelector('.contact-form input[type="text"]').value;
+    const email = document.querySelector('.contact-form input[type="email"]').value;
+    const message = document.querySelector('.contact-form textarea').value;
+    
+    if (!name || !email || !message) {
+        alert('Please fill in all fields before sending via WhatsApp');
+        return;
+    }
+    
+    const phoneNumber = '919588563701';
+    const whatsappMessage = `Hi Lokesh!\n\nName: ${name}\nEmail: ${email}\n\nMessage: ${message}`;
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappURL, '_blank');
+}

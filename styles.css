@@ -552,6 +552,15 @@ section:not(.hero) {
     color: var(--primary-color);
 }
 
+.whatsapp-link {
+    color: #25D366 !important;
+}
+
+.whatsapp-link:hover {
+    color: #128C7E !important;
+    transform: scale(1.05);
+}
+
 .contact-form {
     background: var(--bg-card);
     padding: 2rem;
